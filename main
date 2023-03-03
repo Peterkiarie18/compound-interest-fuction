@@ -1,0 +1,13 @@
+    def compound_interest(principal, rate, time):
+        amount = principal * (1 + rate/100) ** time
+        interest = amount - principal
+        return interest
+
+    # Prompt the user for input and call the function
+    principal = float(input("Enter the principal amount: "))
+    rate = float(input("Enter the interest rate: "))
+    time = int(input("Enter the time period (in years): "))
+
+    interest = compound_interest(principal, rate, time)
+
+    print(f"The compound interest for a principal of {principal:.2f}, a rate of {rate:.2f}%, and a time period of {time} years is {interest:.2f}")
